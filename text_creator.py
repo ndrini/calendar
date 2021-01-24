@@ -41,6 +41,24 @@ class text_creator():
 with open(r'constants.yaml') as data_file:
     data = safe_load(data_file)
 
+print (data)
+print('''\n\n
+Please, provide some information about the month you want to create 
+the calenda for. 
+''')
+
+month = int(input("Enter the inputs : ") or "4") 
+# input("The number of the month you need: for instance Marce is 3") or 4
+# week_day = input(" The week day the start with.") or "giovedi"
+# week_number = input("The week number") or 14
+
+c = text_creator(
+    month, 
+    u"giovedì",
+   # week_day, 
+   # int(week_number)
+    14,
+   )
 #              month, week_day, week_number,
-c = text_creator(4, "giovedì", 14)
+# c = text_creator(4, "giovedì", 14)
 c.export_as_text()
