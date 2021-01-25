@@ -27,7 +27,7 @@ class text_creator():
                         this_week,
                         this_month)
                         )    
-                print("  * * {} {} {} *".format(
+                print("  * ** {} {} {} **".format(
                 data["week_days"][week_day_number % 7 ],
                 month_day, 
                 this_month,)
