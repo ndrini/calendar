@@ -12,15 +12,14 @@ Due to the fact that my mother tongue language is Italian, I set the calendar in
 Just change constants.yaml with your language, if necessary. 
 
 # How to run
-Change the last line of text_creater.py 
-by input month, week_day, week_number,
-like this
-    
-    c = text_creator(4, "giovedì", 14)
+Run
 
-Then run
+    $ python3 text_creator.py
 
-    python3 text_creator.py
+and answer the questions. 
+The output (that can be copied/pasted in dokuwiki page) will be available in the as standard output.
 
+# Test 
+Run, after installing pytest if necessary: 
 
-The output will be available in the as standard output.
+    $ python3 -m pytest test_text_creator.py 
