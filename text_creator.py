@@ -47,17 +47,15 @@ Please, provide some information about the month you want to create
 the calenda for. 
 ''')
 
-month = int(input("Enter the inputs : ") or "4") 
-# input("The number of the month you need: for instance Marce is 3") or 4
-# week_day = input(" The week day the start with.") or "giovedi"
-# week_number = input("The week number") or 14
+month = input("The number of the month \
+you need: for instance Marce is 3") or "4"
+week_day = input(" The week day the start with.") or "giovedì"
+week_number = input("The week number") or 14
 
 c = text_creator(
-    month, 
-    u"giovedì",
-   # week_day, 
-   # int(week_number)
-    14,
+    int(month), 
+    week_day, 
+    int(week_number)
    )
 #              month, week_day, week_number,
 # c = text_creator(4, "giovedì", 14)
