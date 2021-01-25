@@ -1,6 +1,6 @@
 from yaml import safe_load
 
-class text_creator():
+class TextCreator():
     def __init__(self, 
                  month, 
                  week_day,
@@ -52,11 +52,11 @@ you need: for instance Marce is 3") or "4"
 week_day = input(" The week day the start with.") or "giovedì"
 week_number = input("The week number") or 14
 
-c = text_creator(
+c = TextCreator(
     int(month), 
     week_day, 
     int(week_number)
    )
 #              month, week_day, week_number,
-# c = text_creator(4, "giovedì", 14)
+# c = TextCreator(4, "giovedì", 14)
 c.export_as_text()
