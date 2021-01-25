@@ -45,15 +45,6 @@ class TextCreator():
             this_week += 1
         return result     
     
-with open(r'constants.yaml') as data_file:
-    data = safe_load(data_file)
-
-print (data)
-print('''\n\n
-Please, provide some information about the month you want to create 
-the calenda for. 
-''')
-
 def read_user_preference():
     month = input("The number of the month \
     you need: for instance Marce is 3") or "4"
@@ -64,9 +55,17 @@ def read_user_preference():
             "week_number": int(week_number),
             }
 
-if __name__ == '__main__':
-    pref = read_user_preference()
+with open(r'constants.yaml') as data_file:
+    data = safe_load(data_file)
+# print (data)
 
+if __name__ == '__main__':
+
+    print('''\n\n
+    Please, provide some information about the month you want to create 
+    the calenda for. 
+    ''')
+    pref = read_user_preference()
     c = TextCreator(
         pref["month"], 
         pref["week_day"], 

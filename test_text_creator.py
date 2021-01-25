@@ -1,6 +1,6 @@
+import pytest
 from text_creator import TextCreator
 from text_creator import read_user_preference
-
 
 def test_TextCreator():
     my_c = TextCreator(
@@ -12,19 +12,24 @@ def test_TextCreator():
     assert result[-10:-1] == "Giugno **"
 
 
-# def test_read_user_preference(monkeypatch):
-#     input_values = [3, "giovedì", 14]
+testdata = [(["6", "martedì", "22"],
+            {"month": 6,    
+             "week_day" : "martedì", 
+             "week_number": 22,
+             }
+            ),
+            (["9", "domenica", "45"],
+            {"month": 9,    
+             "week_day" : "domenica", 
+             "week_number": 45,
+             }
+            ),
+            ]
 
-#     def mock_input(s):
-#         output.append(s)
-#         return input_values.pop(0)
-
-#     read_user_preference.input = mock_input
-
-#     # monkeypatch.setattr('builtins.input', 
-#     #     lambda _: "Mark")
-
-#     read_user_preference.print = lambda s : output.append(s)
-#     read_user_preference.main()
- 
-#     assert output["month"] == "Aprile"
+@pytest.mark.parametrize("moke_values,expected", testdata)
+def test_read_many(monkeypatch, moke_values, expected):
+    values = moke_values
+    def substitution(s):
+        return values.pop(0)
+    monkeypatch.setattr('builtins.input', substitution)
+    assert read_user_preference() == expected
