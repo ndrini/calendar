@@ -1,5 +1,5 @@
 from yaml import safe_load
-import pytest
+# import pytest
 
 class TextCreator():
     def __init__(self, 
@@ -64,10 +64,6 @@ def read_user_preference():
             "week_day" : week_day, 
             "week_number": int(week_number),
             }
-
-# def test_read_user_preference():
-#     my_pref = read_user_preference()
-#     assert pref["month"] == "Aprile"
 
 if __name__ == '__main__':
     pref = read_user_preference()
