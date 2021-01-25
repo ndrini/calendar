@@ -1,5 +1,4 @@
 from yaml import safe_load
-# import pytest
 
 class TextCreator():
     def __init__(self, 
