@@ -69,22 +69,14 @@ def read_user_preference():
 #     my_pref = read_user_preference()
 #     assert pref["month"] == "Aprile"
 
-def test_TextCreator():
-    my_c = TextCreator(
-        6, # "Giugno" 
-        "martedì", 
-        23,
-       )
-    result = my_c.export_as_text()
-    assert result[-10:-1] == "Giugno **"
+if __name__ == '__main__':
+    pref = read_user_preference()
 
-# pref = read_user_preference()
-
-# c = TextCreator(
-#     pref["month"], 
-#     pref["week_day"], 
-#     pref["week_number"],
-#    )
-# #              month, week_day, week_number,
-# # c = TextCreator(4, "giovedì", 14)
-# print(c.export_as_text())
+    c = TextCreator(
+        pref["month"], 
+        pref["week_day"], 
+        pref["week_number"],
+    )
+    #              month, week_day, week_number,
+    # c = TextCreator(4, "giovedì", 14)
+    print(c.export_as_text())
