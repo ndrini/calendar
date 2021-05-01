@@ -1,15 +1,20 @@
 import pytest
 from text_creator import TextCreator
-from text_creator import read_user_preference
+from text_creator import read_user_preference, set_up_environment
 
 def test_TextCreator():
+    ''' 
+    evaluate the presence of the selected month 
+    in the formatted output text 
+    '''
+    data = set_up_environment()
     my_c = TextCreator(
-        6, # "Giugno" 
+        6, # "giugno" 
         "martedì", 
         23,
-       )
+        data)
     result = my_c.export_as_text()
-    assert result[-10:-1] == "Giugno **"
+    assert result[-10:-1] == "giugno **"
 
 
 testdata = [(["6", "martedì", "22"],

@@ -1,3 +1,5 @@
+language: Italian
+
 week_days:
 - lunedì
 - martedì
@@ -8,16 +10,16 @@ week_days:
 - domenica
 
 months:
-- Gennaio
-- Febbraio
-- Marzo
-- Aprile
-- Maggio
-- Giugno
-- Luglio
-- Agosto
-- Settembre
-- Ottobre
-- Novembre
-- Dicembre
+- gennaio
+- febbraio
+- marzo
+- aprile
+- maggio
+- giugno
+- luglio
+- agosto
+- settembre
+- ottobre
+- novembre
+- dicembre
 
