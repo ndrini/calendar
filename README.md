@@ -16,7 +16,8 @@ Run
 
     $ python3 text_creator.py
 
-and answer the questions. 
+and then **follow the guided path ** by answering the questions.
+ 
 The output (that can be copied/pasted in dokuwiki page) will be available in the as standard output.
 
 # Test 

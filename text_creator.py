@@ -1,6 +1,55 @@
 from yaml import safe_load
 
 
+def read_user_preference() -> dict:
+    '''
+    Collect user info about the needed month and its peculiarity
+    (for instance the week day the month starts with) 	
+    '''
+
+    print('''\n\n
+    Please, provide some information about the month you want to create 
+    the calenda for. 
+    ''')
+
+    month = input("The number of the month (int) \
+    you need: for instance March is 3: ") or "4"
+
+    data = set_up_environment()
+    try:
+        day_list = ', '.join([ day for day in data['week_days']])
+        # day_list = day_list[:-1] + '.'
+    except:
+        print("not chargable day_list")
+
+
+    print(f'Acceptable day input example {day_list}.')
+    week_day = input(
+        "The week day to start the mounth with (string): ").lower() or "giovedì"
+    
+    # TODO data validation    
+    week_number = input("The week number (int): ") or 14
+    return {"month": int(month),
+            "week_day": week_day,
+            "week_number": int(week_number),
+            }
+
+
+def set_up_environment():
+    ''' 
+    load the language specific constants and inform the user how to change it	
+    '''
+    try:
+        with open(r'constants.yaml') as data_file:
+            data = safe_load(data_file)
+            print('The selected languate is', data['language'])
+            print('\nIf necessary change the content of constants.yaml')
+            return data
+    except:
+        print('Please provide a valid constants.yaml file.')
+        exit()
+
+
 class TextCreator():
     def __init__(self,
                  month,
@@ -52,44 +101,8 @@ class TextCreator():
         return result
 
 
-def read_user_preference():
-    '''
-    Collect user info about the needed month and its peculiarity
-    (for instance the week day the mount starts with	
-    '''
-    print('''\n\n
-    Please, provide some information about the month you want to create 
-    the calenda for. 
-    ''')
-
-    month = input("The number of the month (int) \
-    you need: for instance March is 3: ") or "4"
-    week_day = input(
-        "The week day to start the mounth with (string): ") or "giovedì"
-    week_number = input("The week number (int): ") or 14
-    return {"month": int(month),
-            "week_day": week_day,
-            "week_number": int(week_number),
-            }
-
-
-def set_up_environment():
-    ''' 
-    load the language specific constants and inform the user how to change it	
-    '''
-    try:
-        with open(r'constants.yaml') as data_file:
-            data = safe_load(data_file)
-            print('The selected languate is', data['language'])
-            print('\nIf necessary change the content of constants.yaml')
-            return data
-    except:
-        print('Please provide a valid constants.yaml file.')
-        exit()
-
-
 if __name__ == '__main__':
-    
+
     data = set_up_environment()
 
     pref = read_user_preference()
