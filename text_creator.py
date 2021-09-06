@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from yaml import safe_load
 
 
