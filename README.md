@@ -23,4 +23,8 @@ The output (that can be copied/pasted in dokuwiki page) will be available in the
 # Test 
 Run, after installing pytest if necessary: 
 
-    $ python3 -m pytest test_text_creator.py 
+    $ python3 -m pytest text_creator_test.py
+
+or just 
+
+    $ pytest text_creator_test.py
