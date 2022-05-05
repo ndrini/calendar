@@ -19,13 +19,15 @@ from text_creator import read_user_preference, set_up_environment
 
 
 testdata = [(["it", "6", "martedì", "22"],
-            {"month": 6,    
+            {"lang": "it",
+             "month": 6,    
              "week_day" : "martedì", 
              "week_number": 22,
              }
             ),
             (["it", "9", "domenica", "45"],
-            {"month": 9,    
+            {"lang": "it",
+             "month": 9,    
              "week_day" : "domenica", 
              "week_number": 45,
              }

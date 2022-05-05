@@ -103,13 +103,13 @@ class TextCreator():
             for _ in range(7):
                 if week_day_number % 7 == 0:
                     # insert year    
-                    t2 = "\n__Settimana {}: {} 2021__".format(
+                    t2 = "\n__Settimana {}: {} 2022__".format(
                         this_week,
                         this_month)
                     result += t2
                     print(t2)
 
-                t3 = "\n  * ** {} {} {} **\n".format(
+                t3 = "\n  * {} {} {} **' '** \n".format(
                     self.data["week_days"][week_day_number % 7],
                     month_day,
                     this_month,)
@@ -117,10 +117,7 @@ class TextCreator():
 
                 for part in self.data['day_parts']: 
                     result += "    * " + part + "\n"
-#                 result += """    * mattina
-#     * pomeriggio
-#     * sera
-# """  
+
                 print(t3)
                 # update the values after a day
                 month_day += 1
