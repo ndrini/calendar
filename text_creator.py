@@ -56,7 +56,7 @@ def set_up_environment() -> dict:
             assert type(data) == dict
             lang_list = [i for i in data] 
             print('\nLanguages available are ', lang_list)
-            print('\nIf necessary change the content of constants.yaml')
+            print('\nIf necessary, change the content of constants.yaml')
             return data
     except:
         print('Please provide a valid constants.yaml file.')
