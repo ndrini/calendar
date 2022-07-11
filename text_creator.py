@@ -29,7 +29,7 @@ def read_user_preference() -> dict:
         day_list = ', '.join([ day for day in data['week_days']])
         # day_list = day_list[:-1] + '.'
     except:
-        print("not chargable day_list")
+        print("not chargeable day_list")
 
 
     print(f'Acceptable day input example {day_list}.')
@@ -109,7 +109,7 @@ class TextCreator():
                     result += t2
                     print(t2)
 
-                t3 = "\n  * {} {} {} **' '** \n".format(
+                t3 = "\n  * __{}__ {} {} **' '** \n".format(
                     self.data["week_days"][week_day_number % 7],
                     month_day,
                     this_month,)
