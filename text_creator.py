@@ -116,7 +116,7 @@ class TextCreator():
                 result += t3
 
                 for part in self.data['day_parts']: 
-                    result += "    * " + part + "\n"
+                    result += "    * " + part + "\n" + "      * " +  "\n"
 
                 print(t3)
                 # update the values after a day
