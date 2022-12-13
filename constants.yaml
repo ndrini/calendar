@@ -1,25 +1,92 @@
-language: Italian
+it:
+  language: Italian
 
-week_days:
-- lunedì
-- martedì
-- mercoledì
-- giovedì
-- venerdì
-- sabato
-- domenica
+  week_days:
+  - lunedì
+  - martedì
+  - mercoledì
+  - giovedì
+  - venerdì
+  - sabato
+  - domenica
 
-months:
-- gennaio
-- febbraio
-- marzo
-- aprile
-- maggio
-- giugno
-- luglio
-- agosto
-- settembre
-- ottobre
-- novembre
-- dicembre
+  months:
+  - gennaio
+  - febbraio
+  - marzo
+  - aprile
+  - maggio
+  - giugno
+  - luglio
+  - agosto
+  - settembre
+  - ottobre
+  - novembre
+  - dicembre
 
+  day_parts:
+  - mattina
+  - pomeriggio
+  - sera
+
+es:
+  language: Spanish
+
+  week_days:
+  - lunes
+  - martes
+  - miércoles
+  - jueves
+  - viernes
+  - sábado
+  - domingo
+
+  months:
+  - enero
+  - febrero
+  - Marcha
+  - Abril
+  - Mayo
+  - Junio
+  - Mes de julio
+  - Agosto
+  - Septiembre
+  - Octubre
+  - noviembre
+  - diciembre
+
+  day_parts:
+  - mañana
+  - tarde
+  - noche 
+
+en:
+  language: English
+ 
+  week_days:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  - Sunday
+
+  months:
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
+
+  day_parts:
+  - morning
+  - afternoon
+  - evening 

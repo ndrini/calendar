@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 pyyaml = "*"
+Pipfile = "*"
+pytest = "*"
 
 [dev-packages]
 

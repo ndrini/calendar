@@ -12,6 +12,11 @@ Due to the fact that my mother tongue language is Italian, I set the calendar in
 Just change constants.yaml with your language, if necessary. 
 
 # How to run
+
+Prepare the virtualenv, by using Pipfile
+
+    $ pipenv install Pipfile
+
 Run
 
     $ python3 text_creator.py
