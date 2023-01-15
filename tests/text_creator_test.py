@@ -1,6 +1,7 @@
 import pytest
-from text_creator import TextCreator
-from text_creator import read_user_preference, set_up_environment
+from core.text_creator import TextCreator
+from core.text_creator import read_user_preference, set_up_environment
+
 
 # def test_TextCreator():
 #     ''' 
