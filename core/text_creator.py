@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from yaml import safe_load
-
+import os
 
 def read_user_preference() -> dict:
     '''
@@ -51,7 +51,9 @@ def set_up_environment() -> dict:
     load the language specific constants and inform the user how to change it	
     '''
     try:
-        with open(r'constants.yaml') as data_file:
+        dirname = os.path.dirname(__file__)
+        filename = os.path.join(dirname, r'constants.yaml')
+        with open(filename) as data_file:
             data = safe_load(data_file)
             assert type(data) == dict
             lang_list = [i for i in data] 
