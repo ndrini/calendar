@@ -13,6 +13,7 @@ Just change constants.yaml with your language, if necessary. 
 
 # How to run
 
+## Many input version
 Prepare the virtualenv, by using Pipfile
 
     $ pipenv install Pipfile
@@ -24,6 +25,13 @@ Run
 and then **follow the guided path ** by answering the questions.
  
 The output (that can be copied/pasted in dokuwiki page) will be available in the as standard output.
+
+## Low input version
+As it use actual date to establish the calendar to create it (date close to new month will create that month calendar).
+This version uses the DayList obj. 
+
+    
+
 
 # Test 
 Run, after installing pytest if necessary: 

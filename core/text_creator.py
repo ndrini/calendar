@@ -41,7 +41,7 @@ def read_user_preference() -> dict:
     return {"month": int(month),
             "week_day": week_day,
             "week_number": int(week_number),
-            # "day_partd": day_parts
+            # "day_parts": day_parts
             'lang': lang,
             }
 
